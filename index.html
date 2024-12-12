@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+
+
+
+        <div class="datacontainer">
+            <div class="heartcontainer">
+                <img src="heart.avif" alt="">
+
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="post"></form>
+            <input type="hidden" name="access_key" value="13a3128e-9c9b-479c-b731-ca8e559b93d0">
+            <br>
+            <label for="Name">Name:</label>
+            <input type="Name" name="Name" id="Name" placeholder="Type Your Name">
+            <br>
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="Enter your Email Address">
+            <br>
+            <label for="Gender">Your Gender:</label>
+
+            <div class="Genders">
+                <input type="radio" id="Male" name="genders" value="Male">Male &nbsp;&nbsp;
+                <input type="radio" id="Female" name="genders" value="Female">Female
+            </div>
+            <br>
+            <label for="Height">Your Height:</label>
+            <input type="text" id="Height" name="Height" placeholder="in centimeters">
+            <br>
+            <label for="Weight">Your Weight:(Kgs)</label>
+            <input type="range" id="myRange" name="weight" min="0" max="100" value="70" class="slider">
+            <p>Weight: <span id="demo"></span></p>
+            
+            <button type="submit">Calculate Now</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
+</html>
